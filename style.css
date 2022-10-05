@@ -1,11 +1,88 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
 div {
     border: 1px solid rgb(254, 74, 74);
 }
 
-.sidebar{
-    background-color: lightblue;
+.container{
+    height: 100vh;
+    
+    display: grid;
+    grid-template-columns: 200px 1fr;
+
+    /* change this later when i have more content */
 }
+
+.sidebar{
+    background-color: rgb(17, 106, 136);
+    grid-column: 1;
+    grid-row: 1 / span 2;
+
+    display: grid;
+    grid-template-rows: 100px 250px 300px;
+
+    padding-left: 10px;
+
+    color: white;
+}
+
+.sidebar ul{
+    list-style: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sidebar a{
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar li {
+    padding-bottom: 0.5em;
+}
+
+.header {
+    display: grid;
+
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr;
+}
+
 
 .main {
     background-color: lightgray;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 16px;
+}
+
+.main-projects {
+    display: grid;
+
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+
+    padding: 32px;
+}
+
+.main-metrics {
+    grid-column: 2;
+}
+
+.main-trending {
+    grid-column: 2;
 }
